@@ -64,13 +64,13 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A) && transform.position.x < _borderDistance)
             {
-                transform.Translate(Vector3.right * _sidewayForce * Time.fixedDeltaTime);
+                transform.Translate(Vector3.right * _sidewayForce * Time.deltaTime);
             }
             else
             {
                 if (Input.GetKey(KeyCode.D) && transform.position.x > -_borderDistance)
                 {
-                    transform.Translate(Vector3.right * -_sidewayForce * Time.fixedDeltaTime);
+                    transform.Translate(Vector3.right * -_sidewayForce * Time.deltaTime);
                 }
             }
 
